@@ -99,10 +99,10 @@ export default function Footer() {
         >
           <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
           <form onSubmit={handleSubmit} className="flex flex-col space-y-3 w-full max-w-md">
-            <input type="text" name="name" placeholder="Your Name" required className="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center" />
-            <input type="email" name="email" placeholder="Your Email" required className="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center" />
-            <input type="tel" name="phone" placeholder="Your Phone Number (+91XXXXXXXXXX)" required className="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center" />
-            <textarea name="message" placeholder="Your Message" rows={3} required className="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center"></textarea>
+            <input type="text" name="name" placeholder="Name" required className="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center" />
+            <input type="email" name="email" placeholder="Email" required className="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center" />
+            <input type="tel" name="phone" placeholder="Phone Number" required className="border border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center" />
+            <textarea name="message" placeholder="Message" rows={3} required className="border border-gray-300 rounded-xl px-4 py-2 focus:outline-none focus:ring-2 focus:ring-black shadow-sm text-center"></textarea>
             <button type="submit" className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-900 transition-colors duration-300 shadow-md font-medium">Send</button>
           </form>
 
