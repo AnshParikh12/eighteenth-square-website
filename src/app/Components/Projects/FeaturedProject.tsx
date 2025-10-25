@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const projects = [
@@ -20,43 +20,51 @@ const projects = [
       "/projects/Malabar-County-2-Birwaben/terrace1.jpg",
     ],
   },
-  // Can add more projects here
-  
-  // {
-  //   name: "Another Project",
-  //   description: "Description of another project here.",
-  //   images: [
-  //     "/projects/another-project/img1.jpg",
-  //     "/projects/another-project/img2.jpg",
-  //   ],
-  // },
+  // Add more projects here if needed
 ];
 
 function SingleProjectCarousel({ project }: { project: typeof projects[0] }) {
   const [current, setCurrent] = useState(0);
   const [direction, setDirection] = useState(0);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
+  const startTimer = () => {
+    timerRef.current = setInterval(() => {
       setDirection(1);
       setCurrent((prev) => (prev + 1) % project.images.length);
     }, 4000);
+  };
 
-    return () => clearInterval(timer);
+  const resetTimer = () => {
+    if (timerRef.current) clearInterval(timerRef.current);
+    startTimer();
+  };
+
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, [project.images.length]);
 
   const nextImage = () => {
     setDirection(1);
     setCurrent((prev) => (prev + 1) % project.images.length);
+    resetTimer();
   };
 
   const prevImage = () => {
     setDirection(-1);
     setCurrent((prev) => (prev - 1 + project.images.length) % project.images.length);
+    resetTimer();
   };
 
   return (
-    <section id="projects" className="relative w-full mb-16" style={{ height: "calc(100vh - 130px)" }}>
+    <section
+      id="projects"
+      className="relative w-full mb-16"
+      style={{ height: "calc(100vh - 130px)" }}
+    >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
           key={current}
