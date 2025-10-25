@@ -15,7 +15,7 @@ export default function About() {
           About Eighteenth Square
         </motion.h1>
         <motion.p
-          className="text-gray-700 text-lg md:text-xl max-w-xl mb-8"
+          className="text-gray-700 text-lg md:text-xl max-w-xl mb-8 mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
