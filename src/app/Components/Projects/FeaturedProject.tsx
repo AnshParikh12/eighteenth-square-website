@@ -63,7 +63,7 @@ function SingleProjectCarousel({ project }: { project: typeof projects[0] }) {
     <section
       id="projects"
       className="relative w-full mb-16"
-      style={{ height: "calc(100vh - 130px)" }}
+      style={{ height: "calc(100vh - 124px)" }}
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
