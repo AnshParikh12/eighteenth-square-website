@@ -21,6 +21,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           name="keywords"
           content="interior design Ahmedabad, architecture studio Ahmedabad, modern interiors Ahmedabad, luxury interior design Ahmedabad, residential architecture Ahmedabad, commercial architecture Ahmedabad"
         />
+        <meta name="robots" content="index, follow" />
 
         {/* Canonical URL */}
         <link rel="canonical" href="https://eighteenthsquare.vercel.app" />
@@ -40,6 +41,14 @@ export default function Layout({ children }: { children: ReactNode }) {
         <meta property="og:url" content="https://eighteenthsquare.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Eighteenth Square" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Eighteenth Square | Interior Design & Architecture in Ahmedabad" />
+        <meta
+          name="twitter:description"
+          content="A modern studio in Ahmedabad specializing in elegant interior design and architectural solutions for homes and commercial spaces."
+        />
 
         {/* Basic Schema Markup */}
         <script
