@@ -10,14 +10,16 @@ export default function Layout({ children }: { children: ReactNode }) {
     <>
       <Head>
         {/* Primary Meta */}
-        <title>Eighteenth Square | Interior Design & Architecture Studio</title>
+        <title>
+          Eighteenth Square | Interior Design & Architecture Studio in Ahmedabad
+        </title>
         <meta
           name="description"
-          content="Eighteenth Square is a creative studio specializing in modern interior design and architectural solutions for residential and commercial spaces."
+          content="Eighteenth Square is an interior design and architecture studio in Ahmedabad, offering modern residential and commercial space design."
         />
         <meta
           name="keywords"
-          content="interior design, architecture studio, modern interiors, residential architecture, commercial architecture, luxury interior design, contemporary spaces"
+          content="interior design Ahmedabad, architecture studio Ahmedabad, modern interiors Ahmedabad, luxury interior design Ahmedabad, residential architecture Ahmedabad, commercial architecture Ahmedabad"
         />
 
         {/* Canonical URL */}
@@ -26,17 +28,20 @@ export default function Layout({ children }: { children: ReactNode }) {
         {/* Favicon */}
         <link rel="icon" href="/logo.ico" />
 
-        {/* Open Graph (for social sharing) */}
-        <meta property="og:title" content="Eighteenth Square | Interior Design & Architecture Studio" />
+        {/* Open Graph (Social Sharing) */}
+        <meta
+          property="og:title"
+          content="Eighteenth Square | Interior Design & Architecture in Ahmedabad"
+        />
         <meta
           property="og:description"
-          content="Modern interior and architectural experiences crafted with detail and precision."
+          content="A modern studio in Ahmedabad specializing in elegant interior design and architectural solutions for homes and commercial spaces."
         />
         <meta property="og:url" content="https://eighteenthsquare.vercel.app" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Eighteenth Square" />
 
-        {/* Schema Markup (Basic, expandable later when we have more data) */}
+        {/* Basic Schema Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -46,7 +51,13 @@ export default function Layout({ children }: { children: ReactNode }) {
               name: "Eighteenth Square",
               url: "https://eighteenthsquare.vercel.app",
               description:
-                "A creative architecture and interior design studio delivering modern and functional spaces."
+                "A creative interior design and architecture studio based in Ahmedabad, specializing in residential and commercial spaces.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Ahmedabad",
+                addressRegion: "Gujarat",
+                addressCountry: "India",
+              },
             }),
           }}
         />
