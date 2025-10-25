@@ -17,11 +17,6 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const headerEl = document.querySelector("header");
-    if (headerEl) {
-      console.log("Header height:", headerEl.offsetHeight);
-    }
-
     const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -48,12 +43,13 @@ export default function Header() {
           />
         </motion.div>
 
-        <nav className="hidden md:flex space-x-8">
+        {/* Desktop menu */}
+        <nav className="hidden md:flex space-x-8 text-gray-900">
           {navItems.map((item) => (
             <motion.a
               key={item.name}
               href={item.href}
-              className="text-text hover:text-primary transition text-lg md:text-xl font-medium"
+              className="text-gray-900 hover:text-primary transition text-lg md:text-xl font-medium"
               whileHover={{ scale: 1.1 }}
             >
               {item.name}
@@ -61,10 +57,11 @@ export default function Header() {
           ))}
         </nav>
 
+        {/* Mobile menu button */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-text focus:outline-none"
+            className="text-gray-900 focus:outline-none"
           >
             {menuOpen ? (
               <span className="text-2xl">&times;</span>
@@ -75,12 +72,13 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Mobile menu */}
       {menuOpen && (
         <motion.nav
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           transition={{ duration: 0.3 }}
-          className="md:hidden bg-white shadow-md"
+          className="md:hidden bg-white shadow-md text-gray-900"
         >
           <ul className="flex flex-col space-y-4 p-6">
             {navItems.map((item, index) => (
@@ -92,7 +90,7 @@ export default function Header() {
               >
                 <a
                   href={item.href}
-                  className="text-text hover:text-primary text-lg"
+                  className="text-gray-900 hover:text-primary text-lg"
                   onClick={() => setMenuOpen(false)}
                 >
                   {item.name}

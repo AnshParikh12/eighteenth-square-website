@@ -6,14 +6,14 @@ export default function About() {
   return (
     <section id="about" className="py-20 bg-gray-50 px-6">
       <div className="max-w-4xl mx-auto text-center">
-        <motion.h2
+        <motion.h1
           className="text-3xl font-bold mb-6"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           About Eighteenth Square
-        </motion.h2>
+        </motion.h1>
         <motion.p
           className="text-gray-600 text-lg"
           initial={{ opacity: 0, y: 20 }}
