@@ -7,7 +7,7 @@ export default function About() {
     <section id="about" className="py-20 bg-gray-50 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.h1
-          className="text-3xl font-bold mb-6"
+          className="text-4xl md:text-6xl font-bold mb-4 text-gray-900"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -15,7 +15,7 @@ export default function About() {
           About Eighteenth Square
         </motion.h1>
         <motion.p
-          className="text-gray-600 text-lg"
+          className="text-gray-700 text-lg md:text-xl max-w-xl mb-8"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
