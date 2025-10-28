@@ -24,11 +24,11 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 h-[80px] md:h-[124px] transition-all ${
+      className={`fixed top-0 w-full z-50 transition-all ${
         scrolled ? "bg-white shadow-lg" : "bg-white/70"
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center h-full px-6">
+      <div className="max-w-7xl mx-auto flex justify-between items-center py-3 px-6">
         {/* Logo */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
