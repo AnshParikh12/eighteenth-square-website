@@ -52,7 +52,7 @@ export default function Footer() {
   };
 
   return (
-    <footer id="contact" className="bg-white border-t border-gray-200 text-gray-800 mt-20">
+    <footer id="contact" className="bg-white border-t border-gray-200 text-gray-800">
       <div className="max-w-7xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -64,30 +64,22 @@ export default function Footer() {
             <Image src={logo} alt="Eighteenth Square Logo" width={50} height={50} />
             <span className="text-lg font-semibold">Eighteenth Square</span>
           </div>
-          <p className="text-gray-600 text-sm md:text-base max-w-xs">Mission Statement: Placeholder</p>
           <ul className="text-gray-500 text-sm space-y-1">
-            <li>Placeholder</li>
-            <li>Placeholder</li>
-            <li>Placeholder</li>
+            <li>Ar. Divya Shah  </li>
+            <li>ID. Bhavya Parikh</li>
           </ul>
-          <div className="flex space-x-4 mt-2">
-            {[
-              { href: "https://www.instagram.com/eighteenthsquare/", icon: <FaInstagram />, label: "Instagram", color: "#E1306C" },
-              { href: "https://www.linkedin.com/in/bhavya-parikh-4928612b8/", icon: <FaLinkedin />, label: "LinkedIn", color: "#0A66C2" },
-            ].map((social) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.2 }}
-                className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors duration-300"
-                style={{ color: social.color }}
-              >
-                <span className="sr-only">{social.label}</span>
-                {social.icon}
-              </motion.a>
-            ))}
+          <div className="flex justify-center mt-2">
+            <motion.a
+              href="https://www.instagram.com/eighteenthsquare/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.2 }}
+              className="flex items-center justify-center w-12 h-12 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-700 transition-colors duration-300"
+              style={{ color: "#E1306C" }}
+            >
+              <span className="sr-only">Instagram</span>
+              <FaInstagram size={24} />
+            </motion.a>
           </div>
         </motion.div>
 

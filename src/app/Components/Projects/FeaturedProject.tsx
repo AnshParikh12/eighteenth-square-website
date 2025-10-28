@@ -62,8 +62,8 @@ function SingleProjectCarousel({ project }: { project: typeof projects[0] }) {
   return (
     <section
       id="projects"
-      className="relative w-full mb-16"
-      style={{ height: "calc(100vh - 124px)" }}
+      className="relative w-full mb-16 last:mb-0"
+      style={{ minHeight: "calc(100vh - 124px)" }}
     >
       <AnimatePresence initial={false} custom={direction}>
         <motion.img
