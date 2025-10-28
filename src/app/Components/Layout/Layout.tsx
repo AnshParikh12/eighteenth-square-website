@@ -74,7 +74,8 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-1">{children}</main>
+        {/* Responsive top padding to match fixed header height */}
+        <main className="flex-1 pt-[80px] md:pt-[124px]">{children}</main>
         <Footer />
       </div>
     </>

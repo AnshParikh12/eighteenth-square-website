@@ -14,6 +14,7 @@ export default function About() {
         >
           About Eighteenth Square
         </motion.h1>
+
         <motion.p
           className="text-gray-700 text-lg md:text-xl max-w-3xl mb-6 mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
@@ -22,14 +23,16 @@ export default function About() {
         >
           Having met during the eighteenth year of our lives, we began our journey in the field of design with a shared passion and purpose.  
         </motion.p>
+
         <motion.p
           className="text-gray-700 text-lg md:text-xl max-w-3xl mb-6 mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Eighteenth Square is more than just a name - it's a reflection of our origins, a symbol of growth, and a roadmap of creative intent. Each “square” represents a chapter shaped by experience, evolution, and deliberate design.
+          Eighteenth Square is more than just a name - it&apos;s a reflection of our origins, a symbol of growth, and a roadmap of creative intent. Each &ldquo;square&rdquo; represents a chapter shaped by experience, evolution, and deliberate design.
         </motion.p>
+
         <motion.p
           className="text-gray-700 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}

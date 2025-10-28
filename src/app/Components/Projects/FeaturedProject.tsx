@@ -6,7 +6,7 @@ import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const projects = [
   {
-    name: "Malabar County 2",
+    name: "The House with Arched Windows",
     description: "A modern and cozy living space transformed with elegant design.",
     images: [
       "/projects/Malabar-County-2-Birwaben/livingroom1.jpg",
