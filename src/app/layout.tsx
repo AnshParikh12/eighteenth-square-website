@@ -1,4 +1,6 @@
-// app/layout.tsx
+import Header from "@/app/Components/Layout/Header";
+import Footer from "@/app/Components/Layout/Footer";
+import "./globals.css";
 import { ReactNode } from "react";
 
 export const metadata = {
@@ -6,7 +8,7 @@ export const metadata = {
   description:
     "Eighteenth Square is an interior design and architecture studio in Ahmedabad, offering modern residential and commercial space design.",
   keywords:
-    "interior design Ahmedabad, architecture studio Ahmedabad, modern interiors Ahmedabad, luxury interior design Ahmedabad, residential architecture Ahmedabad, commercial architecture Ahmedabad",
+    "interior design Ahmedabad, architecture Ahmedabad, modern interiors Ahmedabad, luxury interior design Ahmedabad, residential architecture Ahmedabad, commercial architecture Ahmedabad",
   openGraph: {
     title: "Eighteenth Square | Interior Design & Architecture in Ahmedabad",
     description:
@@ -21,39 +23,56 @@ export const metadata = {
     description:
       "A modern studio in Ahmedabad specializing in elegant interior design and architectural solutions for homes and commercial spaces.",
   },
-  icons: {
-    icon: "/favicon.ico",
-  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "Eighteenth Square",
-    url: "https://eighteenthsquare.vercel.app",
-    description:
-      "A creative interior design and architecture studio based in Ahmedabad, specializing in residential and commercial spaces.",
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Ahmedabad",
-      addressRegion: "Gujarat",
-      addressCountry: "India",
-    },
-  };
-
   return (
     <html lang="en">
       <head>
-        {/* Add your JSON-LD structured data here */}
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords} />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://eighteenthsquare.vercel.app" />
+        <link rel="icon" href="/favicon.ico" />
+
+        {/* Open Graph */}
+        <meta property="og:title" content={metadata.openGraph.title} />
+        <meta property="og:description" content={metadata.openGraph.description} />
+        <meta property="og:url" content={metadata.openGraph.url} />
+        <meta property="og:site_name" content={metadata.openGraph.siteName} />
+        <meta property="og:type" content={metadata.openGraph.type} />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content={metadata.twitter.card} />
+        <meta name="twitter:title" content={metadata.twitter.title} />
+        <meta name="twitter:description" content={metadata.twitter.description} />
+
+        {/* JSON-LD Schema */}
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              name: "Eighteenth Square",
+              url: "https://eighteenthsquare.vercel.app",
+              description:
+                "A creative interior design and architecture studio based in Ahmedabad, specializing in residential and commercial spaces.",
+              address: {
+                "@type": "PostalAddress",
+                addressLocality: "Ahmedabad",
+                addressRegion: "Gujarat",
+                addressCountry: "India",
+              },
+            }),
+          }}
         />
       </head>
       <body>
-        {/* Your Header and Footer components */}
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
