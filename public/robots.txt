@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://eighteenthsquare.in
+
+# Sitemaps
+Sitemap: https://eighteenthsquare.in/sitemap.xml
