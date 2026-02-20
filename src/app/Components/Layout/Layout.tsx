@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <meta name="robots" content="index, follow" />
 
         {/* Canonical URL */}
-        <link rel="canonical" href="https://eighteenthsquare.in" />
+        <link rel="canonical" href="https://www.eighteenthsquare.in" />
 
         {/* Favicon */}
         <link rel="icon" href="/logo.ico" />
@@ -38,7 +38,7 @@ export default function Layout({ children }: { children: ReactNode }) {
           property="og:description"
           content="A modern studio in Ahmedabad specializing in elegant interior design and architectural solutions for homes and commercial spaces."
         />
-        <meta property="og:url" content="https://eighteenthsquare.in" />
+        <meta property="og:url" content="https://www.eighteenthsquare.in" />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Eighteenth Square" />
 
@@ -58,7 +58,7 @@ export default function Layout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Eighteenth Square",
-              url: "https://eighteenthsquare.in",
+              url: "https://www.eighteenthsquare.in",
               description:
                 "A creative interior design and architecture studio based in Ahmedabad, specializing in residential and commercial spaces.",
               address: {
