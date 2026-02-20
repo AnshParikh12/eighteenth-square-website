@@ -13,7 +13,7 @@ export const metadata = {
     title: "Eighteenth Square | Interior Design & Architecture in Ahmedabad",
     description:
       "A modern studio in Ahmedabad specializing in elegant interior design and architectural solutions for homes and commercial spaces.",
-    url: "https://eighteenthsquare.vercel.app",
+    url: "https://eighteenthsquare.in",
     siteName: "Eighteenth Square",
     type: "website",
   },
@@ -33,7 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <meta name="description" content={metadata.description} />
         <meta name="keywords" content={metadata.keywords} />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://eighteenthsquare.vercel.app" />
+        <link rel="canonical" href="https://eighteenthsquare.in" />
         <link rel="icon" href="/favicon.ico" />
 
         {/* Open Graph */}
@@ -56,7 +56,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
               name: "Eighteenth Square",
-              url: "https://eighteenthsquare.vercel.app",
+              url: "https://eighteenthsquare.in",
               description:
                 "A creative interior design and architecture studio based in Ahmedabad, specializing in residential and commercial spaces.",
               address: {
@@ -65,6 +65,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                 addressRegion: "Gujarat",
                 addressCountry: "India",
               },
+              sameAs: [
+                "https://www.instagram.com/eighteenthsquare/",
+              ]
             }),
           }}
         />
